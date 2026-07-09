@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@theme {
+  --color-bg: var(--bg);
+  --color-bg-secondary: var(--bg-secondary);
+
+  --color-text: var(--text);
+  --color-text-heading: var(--text-h);
+
+  --color-accent: var(--accent);
+  --color-accent-bg: var(--accent-bg);
+  --color-accent-border: var(--accent-border);
+
+  --color-blue: var(--blue-anil);
+  --color-blue-bg: var(--blue-bg);
+  --color-blue-border: var(--blue-border);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--sans);
+}
+
+:root {
+  --text: #ffffff;
+  --text-h: #eff5fa;
+
+  --bg: #010308;
+  --bg-secondary: #07111f;
+
+  --border: rgba(56, 189, 248, 0.15);
+
+  --code-bg: #0b1220;
+
+  /* Verde neon principal */
+  --accent: #82E846;
+  --accent-bg: #82E8461a;
+  --accent-border: #82E84066;
+
+  /* Azul claro secundário */
+  --blue-anil: #38bdf8;
+  --blue-bg: rgba(56, 189, 248, 0.1);
+  --blue-border: rgba(56, 189, 248, 0.35);
+
+  --social-bg: rgba(15, 23, 42, 0.7);
+
+  --shadow:
+    rgba(0, 0, 0, 0.5) 0 20px 40px -15px;
+
+  --sans: 'Geist', Inter, sans-serif;
+  --heading: 'Geist', Inter, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.4px;
+
+  color: var(--text);
+  background: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: dark;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
