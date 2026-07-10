@@ -1,3 +1,4 @@
+import { FeaturedProjects } from "./components/featured-projects"
 import { Header } from "./components/header"
 import { Hero } from "./components/hero"
 
@@ -8,7 +9,7 @@ function App() {
 			<Header />
 			<main>
 				<Hero/>
-				<div className="ticks"></div>
+				<FeaturedProjects/>
 				<section id="next-steps">
 				</section>
 				<div className="ticks"></div>
