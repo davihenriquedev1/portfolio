@@ -19,6 +19,9 @@
   --color-border: var(--border);
 
   --font-sans: var(--sans);
+
+  --breakpoint-2xs: 22rem; /* 320px */
+  --breakpoint-xs: 30rem; /* 480px */
 }
 
 :root {
