@@ -12,8 +12,8 @@ export const Hero = () => {
                 <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent mb-2 font-semibold ">Full Stack Developer JR</h2>
                 <div className="text-accent/50 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Desenvolvendo aplicações modernas cujo foco é satisfazer a necessidade real de cada cliente.</div>
                 <div className="flex flex-col xs:flex-row gap-2 mt-3 w-full">
-                    <CustomButton variant="primary">Ver projetos</CustomButton>
-                    <CustomButton variant="secondary">Entre em contato</CustomButton>
+                    <CustomButton variant="primary"><a href="/projects">Ver projetos</a></CustomButton>
+                    <CustomButton variant="secondary"><a href="/#contact">Entre em contato</a></CustomButton>
                 </div>
             </div>
         </section>

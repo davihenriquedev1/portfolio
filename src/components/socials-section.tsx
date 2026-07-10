@@ -3,7 +3,7 @@ import { ContactItem } from "./socials-item";
 
 export const SocialsSection = () => {
 	return (
-		<section className="flex flex-col gap-8 py-6 mt-10 lg:py-8 w-full mb-4">
+		<section className="flex flex-col gap-8 py-6 mt-10 lg:py-8 w-full mb-4" id="contact">
 			<h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent font-semibold uppercase text-center">
 				Contato & Redes
 			</h2>
