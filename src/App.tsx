@@ -2,6 +2,7 @@ import { AboutSection } from "./components/about-section"
 import { FeaturedProjects } from "./components/featured-projects"
 import { Header } from "./components/header"
 import { Hero } from "./components/hero"
+import { SkillsSection } from "./components/skills-section"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 				<Hero/>
 				<FeaturedProjects/>
 				<AboutSection/>
+				<SkillsSection/>
 			</main>
 		</div>
 	)
