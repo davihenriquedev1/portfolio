@@ -1,3 +1,4 @@
+import { AboutSection } from "./components/about-section"
 import { FeaturedProjects } from "./components/featured-projects"
 import { Header } from "./components/header"
 import { Hero } from "./components/hero"
@@ -10,10 +11,7 @@ function App() {
 			<main>
 				<Hero/>
 				<FeaturedProjects/>
-				<section id="next-steps">
-				</section>
-				<div className="ticks"></div>
-				<section id="spacer"></section>
+				<AboutSection/>
 			</main>
 		</div>
 	)
