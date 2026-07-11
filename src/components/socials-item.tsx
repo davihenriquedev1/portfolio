@@ -15,7 +15,7 @@ export const ContactItem = ({...social}: Social) => {
                 className="text-accent shrink-0"
             />
 
-            <div>
+            <div className="flex flex-col wrap-anywhere">
                 <h3 className="font-semibold text-white">
                     {social.title}
                 </h3>
@@ -24,9 +24,9 @@ export const ContactItem = ({...social}: Social) => {
                     {social.description}
                 </p>
 
-                <span className="text-sm text-gray-300">
+                <p className="text-sm text-gray-300">
                     {social.value}
-                </span>
+                </p>
             </div>
         </a>
     )
