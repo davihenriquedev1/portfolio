@@ -9,7 +9,7 @@ export const projects: Project[] = [
     technologies: [
       "React",
       "TypeScript",
-      "Vite",
+      "Next.js",
       "Tailwind CSS",
       "Node.js",
       "Express",
