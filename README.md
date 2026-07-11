@@ -26,7 +26,6 @@ The project was developed with a focus on clean design, responsive layout, and a
 - About page with professional information
 - Contact section
 - Client-side navigation
-- Custom dark theme design
 - SEO optimized page titles and metadata
 
 ## 📂 Project Structure
@@ -47,7 +46,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/davihenriquedev1/portfolio.git
 ````
 
 Install dependencies:
@@ -81,15 +80,5 @@ npm run build
 **Davi Henrique**
 
 * Website: [https://davihenriquedev.com](https://davihenriquedev.com)
-* GitHub: [https://github.com/your-username](https://github.com/your-username)
-* LinkedIn: [https://linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-
-```
-
-Eu deixaria assim mesmo. Para um portfólio, o README não precisa ser gigante; ele precisa mostrar que o projeto é bem cuidado.
-
-Só faltaria você trocar:
-- `your-username`
-- `your-profile`
-- o caminho da imagem `preview.png` se ela tiver outro nome.
-```
+* GitHub: [https://github.com/davihenriquedev1](https://github.com/davihenriquedev1)
+* LinkedIn: [https://linkedin.com/in/davihenriquedev](https://linkedin.com/in/davihenriquedev)
