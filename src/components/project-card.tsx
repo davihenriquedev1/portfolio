@@ -28,7 +28,7 @@ export const ProjectCard = ({
             <img
                 src={image}
                 alt={title}
-                className="h-44 w-full rounded-lg border border-white/10 object-cover object-top-left"
+                className="h-44 w-full rounded-lg border border-white/10 object-cover object-top"
             />
 
             <div className="flex flex-1 flex-col gap-3">
