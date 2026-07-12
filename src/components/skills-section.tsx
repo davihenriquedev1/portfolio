@@ -77,8 +77,8 @@ const skills = [
 
 export const SkillsSection = () => {
 	return (
-		<section className="flex flex-col gap-8 py-6 mt-10 lg:py-8 w-full" id="skills">
-			<h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent font-semibold uppercase text-center">
+		<section className="flex flex-col py-8 lg:py-10 w-full border-t border-gray-400/5" id="skills">
+			<h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent font-semibold uppercase text-center mb-6">
 				Habilidades Técnicas
 			</h2>
 
@@ -88,7 +88,7 @@ export const SkillsSection = () => {
 						key={category.title}
 						className="rounded-xl border border-blue/20 bg-white/2 p-5 transition-all duration-300 hover:border-blue/40 hover:shadow-[0_0_25px_rgba(56,189,248,.12)]"
 					>
-						<h3 className="mb-5 text-lg font-semibold text-white">
+						<h3 className="mb-5 text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-white">
 							{category.title}
 						</h3>
 

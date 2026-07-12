@@ -32,7 +32,7 @@ export const ProjectCard = ({
             />
 
             <div className="flex flex-1 flex-col gap-3">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-white">
                     {title}
                 </h3>
 

@@ -1,8 +1,8 @@
 export const AboutSection = () => {
     return (
-        <section className="flex flex-col justify-center py-6 mt-10 lg:py-8 w-full gap-2">
-            <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent mb-4 font-semibold uppercase text-center">Sobre mim</h2>
-            <p className="mx-auto max-w-4xl text-center leading-8 text-gray-300">
+        <section className="flex flex-col justify-center py-8 lg:py-10 w-full border-t border-gray-400/5">
+            <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent mb-6 font-semibold uppercase text-center">Sobre mim</h2>
+            <p className="mx-auto max-w-4xl md:text-center leading-8 text-gray-300">
                 Desenvolvedor Full Stack apaixonado por tecnologia e pela construção de
                 aplicações que resolvem problemas reais. Meu foco é desenvolver interfaces
                 modernas, APIs robustas e sistemas escaláveis utilizando tecnologias como
