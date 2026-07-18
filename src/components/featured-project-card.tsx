@@ -13,11 +13,13 @@ type Props = ComponentProps<"article"> & {
 export const FeaturedProjectCard = ({title, description, technologies, image, repo, demo, className = "", ...props}: Props) => {
     return (
         <article
-            className={`flex flex-col gap-5 rounded-xl border border-blue/25 bg-white/2 p-4 transition-all duration-300 md:flex-row md:items-start hover:-translate-y-1 hover:border-blue/50 hover:shadow-[0_0_30px_rgba(56,189,248,.15)] ${className}`}
+            className={`flex flex-1 flex-col gap-5 rounded-xl border border-blue/25 bg-white/2 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue/50 hover:shadow-[0_0_30px_rgba(56,189,248,.15)] ${className}`}
             {...props}
-        >
-            <img src={image} alt={title} className="w-full rounded-lg border border-white/10 object-cover object-left md:w-64 md:shrink-0   "
-            />
+        >   
+            <div className="w-full  rounded-xl">
+                <img src={image} alt={title} className="w-full rounded-lg border border-white/10 object-cover object-center" />
+            </div>
+            
 
             <div className="flex flex-1 flex-col gap-2">
                 <h3 className="text-xl font-semibold text-white">

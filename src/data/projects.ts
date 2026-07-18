@@ -50,7 +50,7 @@ export const projects: Project[] = [
       "Typescript",
     ],
     repo: "https://github.com/davihenriquedev1/pizzaria-react-shadcn",
-    featured: false
+    featured: true
   },
   {
     title: "Template Medical Center",
@@ -64,6 +64,6 @@ export const projects: Project[] = [
     ],
     demo: 'https://davihenriquedev1.github.io/medical-center-landing-page/',
     repo: "https://github.com/davihenriquedev1/medical-center-landing-page",
-    featured: false
+    featured: true
   },
 ];
