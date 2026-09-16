@@ -1,65 +1,113 @@
-import { MenuIcon } from "lucide-react";
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { HeaderLink } from "./header-link";
+import { MenuIcon, XIcon } from "lucide-react"
+import { useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
+import { HeaderLink } from "./header-link"
 
 export const Header = () => {
-    const [mobileMenu, setMobileMenu] = useState<'open' | 'closed'>('closed')
-    const [screen, setScreen] = useState(window.innerWidth);
-    const mobileLimit = 780;
+	const [mobileMenu, setMobileMenu] = useState(false)
+	const mobileLimit = 780
 
-    const handleMobileMenu = () => {
-        if (mobileMenu === 'open') setMobileMenu('closed');
-        else setMobileMenu('open');
-    }
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth > mobileLimit) {
+				setMobileMenu(false)
+			}
+		}
 
-    useEffect(() => {
-        const handleResize = () => {
-            setScreen(window.innerWidth);
+		window.addEventListener("resize", handleResize)
 
-            if (window.innerWidth > mobileLimit) {
-                setMobileMenu("closed");
-            }
-        };
+		return () => {
+			window.removeEventListener("resize", handleResize)
+		}
+	}, [])
 
-        window.addEventListener("resize", handleResize);
+	const handleMobileMenu = () => {
+		setMobileMenu((previous) => !previous)
+	}
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+	return (
+		<header className="relative z-50 flex items-center justify-between border-b border-gray-50/10 px-6 py-4">
+			<NavLink
+				to="/"
+				className="flex items-center justify-center gap-2"
+				onClick={() => setMobileMenu(false)}
+			>
+				<img
+					src="/images/logo-text.png"
+					alt="Davi Henrique DEV"
+                    title="Davi Henrique DEV"
+					className="w-20 sm:w-24"
+				/>
+			</NavLink>
 
-        return (
-            <header className="flex items-center justify-between py-2 border-b border-gray-50/20">
-                <NavLink to="/" className="flex items-center justify-center gap-2 cursor-pointer">
-                    <img src="/images/logo.png" alt="logo" className="w-16 sm:w-20" />
-                    <img src="/images/logo-text.png" alt="logo" className="w-16 sm:w-20" />
-                </NavLink>
-                <div>
-                    {(screen > mobileLimit) &&
-                        <nav>
-                            <ul className="flex items-center uppercase text-sm">
-                                <HeaderLink to="/projects" value="PROJETOS" className="px-2 " />
-                                <HeaderLink to="/about" value="SOBRE" className="border-l border-l-gray-50/40 px-2 "/>
-                                <li className="border-l border-l-gray-50/40 px-2 hover:text-accent transition-all duration-400 hover:cursor-pointer"><a href="/#skills">SKILLS</a></li>
-                                <li className="border-l border-l-gray-50/40 px-2 hover:text-accent transition-all duration-400 hover:cursor-pointer"><a href="/#contact">CONTATO</a></li>
-                            </ul>
-                        </nav>
-                    }
-                    {screen <= mobileLimit &&
-                        <MenuIcon onClick={handleMobileMenu} className="text-accent"/>
-                    }
-                    {mobileMenu === "open" &&
-                        <nav className="relative">
-                            <ul className="flex text-xs flex-col lg:gap-2 border border-gray-50/50 rounded-sm p-2 items-end w-28 absolute right-0 bg-bg-secondary">
-                                <HeaderLink to="/projects" value="PROJETOS" className="px-0 py-2"/>
-                                <HeaderLink to="/about" value="SOBRE" className="border-t border-t-gray-50/20 px-0 py-2"/>
-                                <li className="border-t border-t-gray-50/20 py-2 hover:text-accent transition-all duration-400 hover:cursor-pointer "><a href="/#skills">SKILLS</a></li>
-                                <li className="border-t border-t-gray-50/20 py-2 hover:text-accent transition-all duration-400 hover:cursor-pointer"><a href="/#contact">CONTATO</a></li>
-                            </ul>
-                        </nav>
-                    }
-                </div>
-            </header>
-        )
-    }
+			<nav className="hidden min-[781px]:block">
+				<ul className="flex items-center gap-1 text-sm font-medium uppercase tracking-wide">
+					<HeaderLink
+						to="/projects"
+						value="PROJETOS"
+						className="px-3 py-2"
+					/>
+
+					<HeaderLink
+						to="/services"
+						value="SERVIÇOS"
+						className="px-3 py-2"
+					/>
+
+					<li>
+						<a
+							href="/#contact"
+							className="ml-2 rounded-sm bg-accent px-4 py-2 text-bg transition-all duration-300 hover:opacity-80"
+						>
+							CONTATO
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div className="min-[781px]:hidden">
+				<button
+					type="button"
+					onClick={handleMobileMenu}
+					aria-label={mobileMenu ? "Fechar menu" : "Abrir menu"}
+					aria-expanded={mobileMenu}
+					className="flex items-center justify-center text-accent"
+				>
+					{mobileMenu ? (
+						<XIcon size={24} />
+					) : (
+						<MenuIcon size={24} />
+					)}
+				</button>
+
+				{mobileMenu && (
+					<nav className="absolute right-0 top-full mt-3 w-40 border border-gray-50/10 bg-bg-secondary p-2 shadow-lg">
+						<ul className="flex flex-col text-right text-sm uppercase">
+							<HeaderLink
+								to="/projects"
+								value="PROJETOS"
+								className="px-3 py-3"
+							/>
+
+							<HeaderLink
+								to="/services"
+								value="SERVIÇOS"
+								className="border-t border-gray-50/10 px-3 py-3"
+							/>
+
+							<li className="border-t border-gray-50/10">
+								<a
+									href="/#contact"
+									onClick={() => setMobileMenu(false)}
+									className="block px-3 py-3 text-accent"
+								>
+									CONTATO
+								</a>
+							</li>
+						</ul>
+					</nav>
+				)}
+			</div>
+		</header>
+	)
+}
