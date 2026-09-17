@@ -21,7 +21,7 @@ export const Services = () => {
 	return (
 		<section
 			id="services"
-			className="relative w-full overflow-hidden bg-green-olive px-6 py-12 text-bg "
+			className="relative w-full overflow-hidden bg-green-olive px-4 md:px-8 py-12 text-bg "
 		>
 			<div className="mx-auto w-full max-w-6xl">
 				{/* Heading */}
