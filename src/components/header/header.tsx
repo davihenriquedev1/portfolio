@@ -26,7 +26,7 @@ export const Header = () => {
 	}
 
 	return (
-		<header className="relative z-50 flex items-center justify-between border-b border-gray-50/10 px-6 py-4">
+		<header className="relative z-50 flex items-center justify-between border-b border-gray-50/10 px-4 md:px-8 py-4">
 			<NavLink
 				to="/"
 				className="flex items-center justify-center gap-2"
@@ -48,11 +48,12 @@ export const Header = () => {
 						className="px-3 py-2"
 					/>
 
-					<HeaderLink
-						to="/services"
-						value="SERVIÇOS"
-						className="px-3 py-2"
-					/>
+					<a 
+						href="/#services"
+						className="px-3 py-2 hover:text-accent transition-all duration-300 cursor-pointer"
+					>
+						SERVIÇOS
+					</a>
 
 					<li>
 						<a
@@ -89,17 +90,18 @@ export const Header = () => {
 								className="px-3 py-3"
 							/>
 
-							<HeaderLink
-								to="/services"
-								value="SERVIÇOS"
-								className="border-t border-gray-50/10 px-3 py-3"
-							/>
+							<a
+								href="/#services"
+								className="border-t border-gray-50/10 px-3 py-3 text-white hover:text-accent"
+							>
+								SERVIÇOS
+							</a>
 
 							<li className="border-t border-gray-50/10">
 								<a
 									href="/#contact"
 									onClick={() => setMobileMenu(false)}
-									className="block px-3 py-3 text-accent"
+									className="block px-3 py-3 text-white hover:text-accent"
 								>
 									CONTATO
 								</a>
