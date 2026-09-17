@@ -1,18 +1,20 @@
-import { AboutSection } from "../components/about-section"
-import { FeaturedProjects } from "../components/featured-projects"
-import { Hero } from "../components/hero"
-import { SkillsSection } from "../components/skills-section"
-import { SocialsSection } from "../components/socials-section"
+import { About } from "../components/about-section/about"
+import { FeaturedProjects } from "../components/featured-projects-section/featured-projects"
+import { Hero } from "../components/hero-section/hero"
+import { Services } from "../components/services-section/services"
+import { Skills } from "../components/skills-badge/skills"
+import { SocialsAndContact } from "../components/socials-and-contact-section/socials-and-contact"
 
 function Home() {
 
     return (
         <>
             <Hero/>
+            <Services/>
             <FeaturedProjects/>
-            <AboutSection/>
-            <SkillsSection/>
-            <SocialsSection/>
+            <About/>
+            <Skills/>
+            <SocialsAndContact/>
         </>
     )
 }

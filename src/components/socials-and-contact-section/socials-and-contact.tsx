@@ -1,7 +1,7 @@
-import { socials } from "../data/socials";
+import { socials } from "../../data/socials";
 import { ContactItem } from "./socials-item";
 
-export const SocialsSection = () => {
+export const SocialsAndContact = () => {
 	return (
 		<section className="flex flex-col py-8 lg:py-10 w-full border-t border-gray-400/5" id="contact">
 			<h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent font-semibold uppercase text-center mb-6">

@@ -16,19 +16,25 @@
   --color-blue-bg: var(--blue-bg);
   --color-blue-border: var(--blue-border);
 
+  --color-green-olive: var(--green-olive);
+  --color-green-military: var(--green-military);
+  --color-green-dark: var(--green-dark);
+  --color-green-light: var(--green-light);
+  --color-accent-invert: var(--accent-invert);
+
   --color-border: var(--border);
 
   --font-sans: var(--sans);
 
-  --breakpoint-xxs: 23rem; /* 368px */
-  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-xxs: 23rem;
+  --breakpoint-xs: 30rem;
 }
 
 :root {
   --text: #ffffff;
   --text-h: #eff5fa;
 
-  --bg: #010308;
+  --bg: #09090B;
   --bg-secondary: #07111f;
 
   --border: rgba(56, 189, 248, 0.15);
@@ -39,6 +45,13 @@
   --accent: #82E846;
   --accent-bg: #82E8461a;
   --accent-border: #82E84066;
+  --accent-invert: #c2dfb1;
+
+  /* Verde oliva / militar */
+  --green-olive: #A3A87C;
+  --green-military: #9DA477;
+  --green-dark: #8F9868;
+  --green-light: #B0B58A;
 
   /* Azul claro secundário */
   --blue-anil: #38bdf8;
