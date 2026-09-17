@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CustomButton } from "./ui/custom-button"
+import { CustomButton } from "../ui/custom-button"
 
 export const Hero = () => {
 	return (

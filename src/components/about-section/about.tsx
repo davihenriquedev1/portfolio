@@ -1,4 +1,4 @@
-export const AboutSection = () => {
+export const About = () => {
     return (
         <section className="flex flex-col justify-center py-8 lg:py-10 w-full border-t border-gray-400/5">
             <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-accent mb-6 font-semibold uppercase text-center">Sobre mim</h2>

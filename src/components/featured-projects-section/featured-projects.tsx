@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { projects } from "../data/projects"
+import { projects } from "../../data/projects"
 import { FeaturedProjectCard } from "./featured-project-card"
 
 export const FeaturedProjects = () => {
