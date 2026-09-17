@@ -8,7 +8,7 @@ export const ServiceItem = ({ service }: Props) => {
     const Icon = service.icon
 
     return (
-        <article className="group relative flex h-[420px] w-full shrink-0 overflow-hidden rounded-2xl border border-black/10">
+        <article className="group relative flex h-105 w-full shrink-0 overflow-hidden rounded-2xl border border-black/10">
             {/* Background image */}
             <img
                 src={service.image}
@@ -19,7 +19,7 @@ export const ServiceItem = ({ service }: Props) => {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/35 transition-colors duration-500 group-hover:bg-black/45" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-black/10" />
 
             {/* Content */}
             <div className="relative z-10 flex w-full flex-col p-7 sm:p-9">
