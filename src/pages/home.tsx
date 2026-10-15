@@ -1,20 +1,20 @@
-import { AboutSection } from "../components/about-section"
-import { FeaturedProjects } from "../components/featured-projects"
-import { Hero } from "../components/hero"
-import { SkillsSection } from "../components/skills-section"
-import { SocialsSection } from "../components/socials-section"
+import { About } from "../components/about-section/about"
+import { FeaturedProjects } from "../components/featured-projects-section/featured-projects"
+import { Hero } from "../components/hero-section/hero"
+import { Services } from "../components/services-section/services"
+import { Contact } from "../components/contact-section/contact"
 
 function Home() {
 
-    return (
-        <>
-            <Hero/>
-            <FeaturedProjects/>
-            <AboutSection/>
-            <SkillsSection/>
-            <SocialsSection/>
-        </>
-    )
+	return (
+		<>
+			<Hero />
+			<Services />
+			<FeaturedProjects />
+			<About />
+			<Contact />
+		</>
+	)
 }
 
 export default Home;

@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons";
 
-export type Social = {
+export type Account = {
     title: string;
     description: string;
     value: string;

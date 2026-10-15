@@ -4,10 +4,11 @@ import {
   SiInstagram,
   SiTiktok,
 } from "react-icons/si";
-import type { Social } from "../types/social";
+import type { Account } from "../types/account";
 import { CgMail } from "react-icons/cg";
+import { FaYoutube } from "react-icons/fa";
 
-export const socials: Social[] = [
+export const accounts: Account[] = [
   {
     title: "E-mail",
     description: "Entre em contato comigo.",
@@ -20,7 +21,7 @@ export const socials: Social[] = [
     description: "Veja meus projetos.",
     icon: SiGithub,
     href: "https://github.com/davihenriquedev1",
-    value: "@davihenriquedev1",
+    value: "davihenriquedev1",
   },
   {
     title: "LinkedIn",
@@ -41,6 +42,13 @@ export const socials: Social[] = [
     description: "Tecnologia e programação.",
     icon: SiTiktok,
     href: "https://tiktok.com/@davihenriquedev",
+    value: "@davihenriquedev",
+  },
+  {
+    title: "YouTube",
+    description: "Tutoriais e carreira.",
+    icon: FaYoutube,
+    href: "https://youtube.com/@davihenriquedev",
     value: "@davihenriquedev",
   },
 ];
