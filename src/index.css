@@ -98,3 +98,21 @@ body {
   width: 100%;
   min-height: 100svh;
 }
+
+@keyframes tech-marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-tech-marquee {
+	animation: tech-marquee 45s linear infinite;
+}
+
+.animate-tech-marquee:hover {
+	animation-play-state: paused;
+}
