@@ -61,7 +61,7 @@ export const About = () => {
 			id="about"
 			className="min-h-screen w-full overflow-hidden border-t border-black/10 py-12 bg-[#edf3e2] flex flex-col justify-between"
 		>
-			<div className="mx-auto flex w-full max-w-6xl flex-col gap-12 lg:gap-16">
+			<div className="mx-auto flex w-full max-w-6xl flex-col gap-12 lg:gap-16 px-4 md:px-8">
 				
 				<div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-end lg:gap-16">
 					<div className="max-w-2xl">
