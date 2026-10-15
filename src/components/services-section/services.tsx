@@ -21,10 +21,9 @@ export const Services = () => {
 	return (
 		<section
 			id="services"
-			className="relative w-full overflow-hidden bg-green-olive px-4 md:px-8 py-12 text-bg "
+			className="relative w-full overflow-hidden bg-[#e9f1db] px-4 md:px-8 py-12 text-bg "
 		>
 			<div className="mx-auto w-full max-w-6xl">
-				{/* Heading */}
 				<div className="flex flex-col gap-6 border-b border-black/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
 					<div className="max-w-3xl">
 						<span className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
@@ -38,13 +37,12 @@ export const Services = () => {
 						</h2>
 					</div>
 
-					<p className="max-w-sm text-sm leading-relaxed text-black/50 sm:text-base">
+					<p className="max-w-sm text-right text-sm leading-relaxed text-black/50 sm:text-base">
 						Desenvolvimento, integração e evolução de produtos digitais
 						para transformar necessidades reais em soluções funcionais.
 					</p>
 				</div>
 
-				{/* Carousel */}
 				<div className="mt-10 overflow-hidden">
 					<div
 						className="flex transition-transform duration-700 ease-out"
@@ -63,7 +61,6 @@ export const Services = () => {
 					</div>
 				</div>
 
-				{/* Navigation */}
 				<div className="mt-7 flex items-center justify-between">
 					<div className="flex items-center gap-2">
 						{services.map((service, index) => (
@@ -91,7 +88,6 @@ export const Services = () => {
 					</button>
 				</div>
 
-				{/* Bottom CTA */}
 				<div className="flex flex-col gap-5 border-b border-black/10 py-10 sm:flex-row sm:items-center sm:justify-between">
 					<div>
 						<p className="text-lg font-medium">
