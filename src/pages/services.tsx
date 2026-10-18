@@ -3,7 +3,6 @@ import { Grid } from "../components/services-page/grid";
 import { Packages } from "../components/services-page/packages";
 import { ProcessSection } from "../components/services-page/process-section";
 import { Faq } from "../components/services-page/faq";
-import { Cta } from "../components/services-page/cta";
 import { Contact } from "../components/services-page/contact";
 import { useState } from "react";
 
@@ -19,8 +18,6 @@ const Services = () => {
             <ProcessSection />
             <div className="mx-auto h-px max-w-4xl bg-linear-to-r from-transparent via-accent/20 to-transparent" />
             <Faq />
-            <Cta />
-            <div className="mx-auto h-px max-w-4xl bg-linear-to-r from-transparent via-accent/20 to-transparent" />
             <Contact message={messageSubject}/>
         </main>
     );

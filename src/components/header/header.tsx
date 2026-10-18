@@ -43,14 +43,20 @@ export const Header = () => {
 			<nav className="hidden min-[781px]:block">
 				<ul className="flex items-center gap-1 text-xs font-medium uppercase tracking-wide">
 					<HeaderLink
-						to="/projects"
-						value="PROJETOS"
+						to="/"
+						value="Início"
+						className="px-3 py-2"
+					/>
+					
+					<HeaderLink
+						to="/services"
+						value="SERVIÇOS"
 						className="px-3 py-2"
 					/>
 
 					<HeaderLink
-						to="/services"
-						value="SERVIÇOS"
+						to="/projects"
+						value="PROJETOS"
 						className="px-3 py-2"
 					/>
 

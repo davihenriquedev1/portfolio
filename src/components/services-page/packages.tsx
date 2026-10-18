@@ -38,7 +38,7 @@ export const Packages = ({setSubject}: PackagesProps) => {
                             className={`relative flex flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:p-7 ${
                                 item.featured
                                     ? "border-accent-border bg-accent/4.5 shadow-[0_12px_45px_rgba(130,232,70,0.04)]"
-                                    : "border-white/10 bg-bg-secondary/70 hover:border-accent-border/70"
+                                    : "border-white/10 bg-[#202022] hover:border-accent-border/70"
                             }`}
                         >
                             {item.featured && (
@@ -55,8 +55,9 @@ export const Packages = ({setSubject}: PackagesProps) => {
                                 {item.description}
                             </p>
 
-                            <p className="mt-6 text-2xl font-semibold tracking-tight text-text-heading/40 hover:text-accent/80 transition-colors">
-                                {item.price}
+                            <p className="mt-6 flex flex-col text-text-heading/30">
+                                <span className="text-sm">Faixa de preço médio</span>
+                                <span className="text-2xl tracking-tight text-accent/50 hover:text-accent italic font-light  transition-colors">{item.price}</span>
                             </p>
 
                             <p className="mt-1 text-[11px] text-white/35 leading-3.5">

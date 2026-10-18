@@ -8,9 +8,9 @@ export const packages: Package[] = [
         price: "R$ 500–1.500",
         featured: true,
         items: [
-            "Uma página com até 5 seções",
+            "Uma página com 5 a 7 seções",
             "Layout responsivo",
-            "Botão de WhatsApp e/ou formulário",
+            "Botão de WhatsApp e/ou formulário simples",
             "SEO técnico básico",
             "Revisões definidas na proposta",
         ],

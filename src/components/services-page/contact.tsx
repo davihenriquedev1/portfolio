@@ -1,6 +1,7 @@
 import { Mail, ArrowUpRight, ArrowLeft } from "lucide-react";
 import { MessageCircle } from "lucide-react";
 import { myData } from "../../data/my-data";
+import { Link } from "react-router-dom";
 
 interface ContactProps {
     message: string,
@@ -14,7 +15,7 @@ export const Contact = ({message}: ContactProps) => {
     return (
         <section
             id="contact"
-            className="px-4 py-12 sm:px-8"
+            className="px-4 py-12 sm:px-8 bg-[#161616]"
         >
             <div className="mx-auto max-w-5xl">
                 <div className="mb-10 text-center">
@@ -34,14 +35,14 @@ export const Contact = ({message}: ContactProps) => {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group rounded-2xl border border-white/10 bg-white/2 p-6 transition-colors duration-300 hover:border-accent-border hover:bg-white/4 sm:p-8"
+                        className="group rounded-2xl border p-6 transition-colors duration-300 border-accent-border/70 bg-accent/[0.035] hover:border-accent-border sm:p-8"
                     >
                         <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-accent-border bg-accent-bg text-accent">
                             <MessageCircle size={23} aria-hidden="true" />
                         </div>
 
                         <h3 className="mt-6 text-lg font-semibold text-text-heading">
-                            Vamos conversar
+                            Tem um projeto em mente?
                         </h3>
 
                         <p className="mt-2 text-sm leading-7 text-white/50">
@@ -88,13 +89,13 @@ export const Contact = ({message}: ContactProps) => {
                 </div>
 
                 <div className="mt-8 flex flex-col items-center">
-                    <a
-                        href="/#contact"
+                    <Link
+                        to="/#contact"
                         className="inline-flex w-fit items-center gap-2 p-1 text-xs text-white/50 transition-colors hover:text-accent border-b border-white/20"
                     >
                         <ArrowLeft size={15} aria-hidden="true" />
                         mais formas de contato na página inicial
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
