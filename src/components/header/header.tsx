@@ -26,7 +26,7 @@ export const Header = () => {
 	}
 
 	return (
-		<header className="relative z-50 flex items-center justify-between border-b border-gray-50/10 px-4 md:px-8 py-4">
+		<header className="sticky top-0 left-0 z-50 flex items-center justify-between border-b border-gray-50/10 px-4 md:px-8 py-4 bg-bg/80">
 			<NavLink
 				to="/"
 				className="flex items-center justify-center gap-2"
@@ -41,23 +41,22 @@ export const Header = () => {
 			</NavLink>
 
 			<nav className="hidden min-[781px]:block">
-				<ul className="flex items-center gap-1 text-sm font-medium uppercase tracking-wide">
+				<ul className="flex items-center gap-1 text-xs font-medium uppercase tracking-wide">
 					<HeaderLink
 						to="/projects"
 						value="PROJETOS"
 						className="px-3 py-2"
 					/>
 
-					<a 
-						href="/#services"
-						className="px-3 py-2 hover:text-accent transition-all duration-300 cursor-pointer"
-					>
-						SERVIÇOS
-					</a>
+					<HeaderLink
+						to="/services"
+						value="SERVIÇOS"
+						className="px-3 py-2"
+					/>
 
 					<li>
 						<a
-							href="/#contact"
+							href="#contact"
 							className="ml-2 rounded-sm bg-accent px-4 py-2 text-bg transition-all duration-300 hover:opacity-80"
 						>
 							CONTATO
@@ -72,7 +71,7 @@ export const Header = () => {
 					onClick={handleMobileMenu}
 					aria-label={mobileMenu ? "Fechar menu" : "Abrir menu"}
 					aria-expanded={mobileMenu}
-					className="flex items-center justify-center text-accent"
+					className="flex cursor-pointer items-center justify-center text-accent"
 				>
 					{mobileMenu ? (
 						<XIcon size={24} />
@@ -82,24 +81,23 @@ export const Header = () => {
 				</button>
 
 				{mobileMenu && (
-					<nav className="absolute right-0 top-full mt-3 w-40 border border-gray-50/10 bg-bg-secondary p-2 shadow-lg">
-						<ul className="flex flex-col text-right text-sm uppercase">
+					<nav className="absolute right-4 top-full mt-3 w-40 border border-gray-50/10 bg-[#131313] p-2 shadow-lg">
+						<ul className="flex flex-col text-right text-xs uppercase">
 							<HeaderLink
 								to="/projects"
 								value="PROJETOS"
 								className="px-3 py-3"
 							/>
 
-							<a
-								href="/#services"
-								className="border-t border-gray-50/10 px-3 py-3 text-white hover:text-accent"
-							>
-								SERVIÇOS
-							</a>
+							<HeaderLink
+								to="/services"
+								value="SERVIÇOS"
+								className="border-t border-gray-50/10 px-3 py-3"
+							/>
 
 							<li className="border-t border-gray-50/10">
 								<a
-									href="/#contact"
+									href="#contact"
 									onClick={() => setMobileMenu(false)}
 									className="block px-3 py-3 text-white hover:text-accent"
 								>
