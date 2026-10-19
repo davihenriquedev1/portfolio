@@ -1,7 +1,8 @@
-import { ArrowUpRight } from "lucide-react"
+import { ArrowDown, ArrowUpRight } from "lucide-react"
 import { useEffect, useState } from "react"
 import { services } from "../../data/services"
 import { ServiceItem } from "./service-item"
+import { Link } from "react-router-dom"
 
 export const Services = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
@@ -98,14 +99,19 @@ export const Services = () => {
 							Cada projeto começa entendendo o problema antes de definir
 							a solução.
 						</p>
+						<p className="mt-2 text-xl font-bold text-black text-shadow-xs text-shadow-accent">
+							<Link to={'/services'} className="flex items-center">
+								Ver mais detalhes na página de serviços <ArrowUpRight/>
+							</Link>
+						</p>
 					</div>
 
 					<a
 						href="/#contact"
 						className="group flex w-fit items-center gap-2 text-sm font-semibold uppercase tracking-wider text-accent"
 					>
-						Falar sobre um projeto
-						<ArrowUpRight
+						Quero falar sobre um projeto
+						<ArrowDown
 							size={17}
 							className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
 						/>
