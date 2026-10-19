@@ -5,12 +5,17 @@ import { ProcessSection } from "../components/services-page/process-section";
 import { Faq } from "../components/services-page/faq";
 import { Contact } from "../components/services-page/contact";
 import { useState } from "react";
+import { SEO } from "../components/seo";
 
 const Services = () => {
     const [messageSubject, setMessageSubject] = useState("");
 
     return (
-        <main className="relative isolate overflow-hidden bg-bg text-text">
+        <div className="relative isolate overflow-hidden bg-bg text-text">
+            <SEO
+                title="Davi Henrique | Serviços"
+                description="Serviços desenvolvidos e pacotes prontos."
+            />
             <Hero />
             <div className="mx-auto h-px max-w-4xl bg-linear-to-r from-transparent via-accent/20 to-transparent" />
             <Grid setSubject={setMessageSubject}/>
@@ -19,7 +24,7 @@ const Services = () => {
             <div className="mx-auto h-px max-w-4xl bg-linear-to-r from-transparent via-accent/20 to-transparent" />
             <Faq />
             <Contact message={messageSubject}/>
-        </main>
+        </div>
     );
 };
 

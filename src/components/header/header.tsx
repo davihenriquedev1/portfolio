@@ -90,9 +90,15 @@ export const Header = () => {
 					<nav className="absolute right-4 top-full mt-3 w-40 border border-gray-50/10 bg-[#131313] p-2 shadow-lg">
 						<ul className="flex flex-col text-right text-xs uppercase">
 							<HeaderLink
+								to="/"
+								value="Início"
+								className="px-3 py-3"
+							/>
+					
+							<HeaderLink
 								to="/projects"
 								value="PROJETOS"
-								className="px-3 py-3"
+								className="border-t border-gray-50/10 px-3 py-3"
 							/>
 
 							<HeaderLink

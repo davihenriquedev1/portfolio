@@ -35,7 +35,7 @@ export const Packages = ({setSubject}: PackagesProps) => {
                     {packages.map((item) => (
                         <article
                             key={item.name}
-                            className={`relative flex flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:p-7 ${
+                            className={`group relative flex flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 sm:p-7 ${
                                 item.featured
                                     ? "border-accent-border bg-accent/4.5 shadow-[0_12px_45px_rgba(130,232,70,0.04)]"
                                     : "border-white/10 bg-[#202022] hover:border-accent-border/70"
@@ -55,16 +55,7 @@ export const Packages = ({setSubject}: PackagesProps) => {
                                 {item.description}
                             </p>
 
-                            <p className="mt-6 flex flex-col text-text-heading/30">
-                                <span className="text-sm">Faixa de preço médio</span>
-                                <span className="text-2xl tracking-tight text-accent/50 hover:text-accent italic font-light  transition-colors">{item.price}</span>
-                            </p>
-
-                            <p className="mt-1 text-[11px] text-white/35 leading-3.5">
-                                Valores de referência baseados em médias de preços praticados no mercado. O orçamento final varia conforme a complexidade e o escopo do projeto.
-                            </p>
-
-                            <ul className="mt-6 flex-1 space-y-3 border-t border-white/8 pt-5">
+                            <ul className="mt-6 space-y-3 border-t border-white/3 pt-5">
                                 {item.items.map((feature) => (
                                     <li
                                         key={feature}
@@ -78,6 +69,14 @@ export const Packages = ({setSubject}: PackagesProps) => {
                                     </li>
                                 ))}
                             </ul>
+                            
+                            <p className="mt-6 flex flex-col text-text-heading/30 border-t border-white/3 pt-5">
+                                <span className="text-sm">Faixa de preço médio</span>
+                                <span className="text-2xl tracking-tight text-accent/30 group-hover:text-accent italic font-light transition-colors">{item.price}</span>
+                                <span className="mt-1 text-[11px] text-white/35 leading-3.5">
+                                    Valores de referência baseados em médias de preços praticados no mercado. O orçamento final varia conforme a complexidade e o escopo do projeto.
+                                </span>
+                            </p>
 
                             <a
                                 href="#contact"
